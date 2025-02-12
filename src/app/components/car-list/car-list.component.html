@@ -1,0 +1,28 @@
+<table mat-table [dataSource]="cars" class="car-table mat-elevation-z8">
+    <ng-container matColumnDef="marque">
+      <th mat-header-cell *matHeaderCellDef> Marque </th>
+      <td mat-cell *matCellDef="let car"> {{ car.marque }} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="model">
+      <th mat-header-cell *matHeaderCellDef> Modèle </th>
+      <td mat-cell *matCellDef="let car"> {{ car.model }} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="color">
+      <th mat-header-cell *matHeaderCellDef> Couleur </th>
+      <td mat-cell *matCellDef="let car"> {{ car.color }} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let car">
+        <button mat-button color="primary" (click)="editCars(car)">Modifier</button>
+        <button mat-button color="warn" (click)="deleteCar(car.id)">Supprimer</button>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="['marque', 'model', 'color', 'actions']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['marque', 'model', 'color', 'actions']"></tr>
+  </table>
+  
