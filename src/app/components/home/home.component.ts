@@ -22,7 +22,7 @@ export class HomeComponent {
     private fb: FormBuilder
   ) {
     this.carForm = this.fb.group({
-      marque: ['', Validators.required],
+      brand: ['', Validators.required],
       model: ['', Validators.required],
       color: ['', Validators.required]
     });
@@ -45,7 +45,7 @@ export class HomeComponent {
     this.isEditMode = true;
     this.currentCar = car;
     this.carForm.setValue({
-      marque: car.marque,
+      brand: car.brand,
       model: car.model,
       color: car.color
     });

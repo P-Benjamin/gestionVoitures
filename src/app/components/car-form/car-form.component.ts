@@ -21,7 +21,7 @@ export class CarFormComponent {
   ngOnInit() {
 
     this.carForm = this.fb.group({
-      marque: ['', Validators.required],
+      brand: ['', Validators.required],
       model: ['', Validators.required],
       color: ['', Validators.required],
     });
