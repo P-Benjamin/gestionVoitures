@@ -1,0 +1,10 @@
+{
+  "cars": [
+    {
+      "id": "1",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "color": "Rouge"
+    }
+  ]
+}
