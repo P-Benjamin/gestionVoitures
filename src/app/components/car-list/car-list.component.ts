@@ -13,7 +13,7 @@ export class CarListComponent {
   cars: Car[] = [];
   public role : string =  '';
 
-  constructor(private carService: CarService,private authService : AuthService, private router : Router) {}
+  constructor(private carService: CarService,public authService : AuthService, private router : Router) {}
 
   ngOnInit() {
     this.role = this.authService.currentUser.role
